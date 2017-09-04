@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+   <!-- <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.aryvart.utician.genericclasses.Rounded_Imageview
+            android:id="@+id/reviewer_image"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="5dp" />
+
+     &lt;!&ndash;   <ImageView
+            android:id="@+id/userstatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:layout_marginBottom="10dp" />&ndash;&gt;
+    </FrameLayout>-->
+
+
+    <com.aryvart.utician.genericclasses.CircularImageView
+        android:id="@+id/reviewer_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+
+
+        android:layout_marginTop="5dp"
+        app:siBorderWidth="2dp"
+        app:siBorderAlpha="0.5"
+
+        app:siBorderColor="@color/app_green"
+        android:alpha="1"
+
+      />
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/providerName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1.6"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:text=""
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:textColor="#666"
+                android:textStyle="" />
+
+
+            <!--<LinearLayout
+
+
+                android:orientation="vertical"
+                android:gravity="center_vertical|center_horizontal"
+
+
+
+                android:layout_weight=".8"
+
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <Button
+
+                    android:id="@+id/book_provider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="33dp"
+
+
+                    android:text="Book"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+
+                    android:text="Begin booking here"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    />
+                </LinearLayout>-->
+
+
+
+                <Button
+                android:id="@+id/book_provider"
+                android:layout_width="24dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.4"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Book"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_marginLeft="30dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/dollar" />
+
+            <TextView
+                android:id="@+id/rating"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text=""
+                android:textAllCaps="true"
+                android:textColor="#666"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/whitestar" />
+
+            <TextView
+                android:id="@+id/ratingg"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#666"
+                android:textSize="12sp" />
+
+
+            <!--<ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/time" />
+
+            <TextView
+                android:id="@+id/miles"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#666"
+                android:textSize="12sp" />
+
+-->
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

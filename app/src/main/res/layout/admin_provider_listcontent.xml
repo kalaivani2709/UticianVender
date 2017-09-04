@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:weightSum="2">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+
+        <com.aryvart.uticianvender.genericclasses.CircularImageView
+            android:id="@+id/provider_image"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="5dp"
+
+            app:siBorderWidth="2dp"
+            app:siBorderAlpha="0.5"
+
+            app:siBorderColor="@color/app_green"
+            android:alpha="1"
+
+            android:src="@drawable/default_user_icon" />
+
+      <!--  <com.aryvart.utician.genericclasses.Rounded_Imageview
+            android:id="@+id/provider_image"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/default_user_icon" />
+-->
+        <ImageView
+            android:id="@+id/userstatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="20dp" />
+    </FrameLayout>
+
+
+    <LinearLayout
+
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:layout_weight="1.8"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/provider_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text=""
+            android:textAllCaps="false"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/provider_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text=""
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+            android:textColor="@color/black" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/backarrow"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        android:layout_weight="0.2"
+        android:background="@drawable/leftcon" />
+
+</LinearLayout>

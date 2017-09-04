@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:weightSum="3">
+
+
+        <LinearLayout
+            android:layout_gravity="left"
+            android:id="@+id/layimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:gravity="left"
+            android:padding="2dp"
+
+            >
+
+            <com.aryvart.uticianvender.genericclasses.CircularImageView
+                android:id="@+id/userimg"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+
+
+                app:siBorderWidth="2dp"
+                app:siBorderAlpha="0.5"
+
+                app:siBorderColor="@color/app_green"
+                android:alpha="1"
+
+                android:src="@drawable/default_user_icon" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/lin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2.3"
+            android:gravity="center"
+            android:orientation="vertical"
+android:layout_marginRight="5dp"
+            android:weightSum="3"
+
+            >
+
+            <TextView
+                android:textSize="14sp"
+                android:gravity="center"
+                android:id="@+id/txt_descrpiton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text=" "
+                android:textStyle="bold"
+                android:textColor="#069c9c" />
+
+
+            <TextView
+
+                android:textSize="12sp"
+                android:id="@+id/txt_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=""
+                android:gravity="center"
+                android:textColor="#666"
+
+                />
+
+               <TextView
+
+                android:textSize="13sp"
+                android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                   android:layout_weight="1"
+                android:text=""
+                android:textColor="@color/black"
+
+                   />
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#c0c0c0"></View>
+</LinearLayout>

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Utician Vendor</string>
+    <string name="facebook_app_id">1558732174419714</string>
+    <string name="facebook_name">Facebook</string>
+    <string name="forget_password">Forgot Password ?</string>
+    <string name="terms"> <u>I accept the Terms and Condition </u></string>
+    <string name="service">Which client do have the\n most experience providings services</string>
+    <string name="google_api_key">AIzaSyBKVYwkHUEG-JpHlORYaCogJwdJQhRwT4c</string>
+
+
+    <string name="alert_dialog_title">Please Select</string>
+    <string name="positive_button_text">Select</string>
+    <string name="negative_button_text">Cancel</string>
+    <string name="pass_old">Old password</string>
+    <array name="image_ids">
+        <item>@drawable/gallery_1</item>
+        <item>@drawable/gallery_2</item>
+        <item>@drawable/gallery_3</item>
+        <item>@drawable/gallery_4</item>
+        <item>@drawable/gallery_5</item>
+        <item>@drawable/gallery_6</item>
+    </array>
+</resources>

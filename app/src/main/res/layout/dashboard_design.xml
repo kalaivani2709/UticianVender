@@ -1,0 +1,1275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/my_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#e2e8ef">
+
+            <ImageView
+                android:id="@+id/dash_back"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/menu_drawer" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/menu_filter"
+                android:gravity="center"
+                android:text="Dashboard"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:textColor="#666" />
+
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/header">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="3">
+                //first part
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".8"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1.2"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="35dp"
+                            android:gravity="center"
+
+                            android:text="BALANCE"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/balance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:text=""
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/textView9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:text="This is what you have so far" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.8"
+                        android:orientation="vertical"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:id="@+id/notifcation"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight=".7"
+
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+
+                                android:background="@color/red"
+                                android:padding="5dp"
+                                android:src="@drawable/d_mail" />
+                            <!--android:src="@drawable/appointment300"-->
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+
+                                android:background="@color/black"
+                                android:gravity="left|center"
+                                android:paddingLeft="10dp"
+                                android:text="Notifications"
+                                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                                android:textColor="#FFFFFF" />
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1.8"
+
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <android.support.v4.widget.SwipeRefreshLayout
+                                    android:id="@+id/activity_main_swipe_refresh_layout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ListView
+                                        android:id="@+id/booking_Request"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"></ListView>
+                                </android.support.v4.widget.SwipeRefreshLayout>
+
+                                <TextView
+                                    android:id="@+id/listempty"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="30dp"
+                                    android:gravity="center_horizontal"
+                                    android:text="No New Notifications"
+                                    android:textColor="@color/black"
+
+                                    android:visibility="gone" />
+
+                            </FrameLayout>
+
+                        </LinearLayout>
+                        <!--    <LinearLayout
+                                android:id="@+id/notifcation"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight=".7"
+
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/notify_bell"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:background="@color/red"
+                                    />
+                                 &lt;!&ndash;   android:src="@drawable/notification300"&ndash;&gt;
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+
+                                    android:background="@color/black"
+                                    android:gravity="left|center"
+                                    android:paddingLeft="10dp"
+                                    android:text="Notifications"
+                                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                                    android:textColor="#FFFFFF" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2.3"
+                                android:orientation="vertical">
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ListView
+                                        android:id="@+id/booking_Request"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        ></ListView>
+
+                                    <TextView
+                                        android:textColor="@color/black"
+                                        android:id="@+id/listempty"
+                                         android:text="No New Notifications"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="30dp"
+                                        android:gravity="center_horizontal"
+
+                                        android:visibility="gone" />
+
+
+                                </FrameLayout>
+                            </LinearLayout>-->
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                //second part
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.2"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:id="@+id/Appoitmnets"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+
+                        android:background="#e2e8ef"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/appointments_back"
+                            android:layout_width="30dp"
+
+                            android:layout_height="30dp"
+                            android:background="@color/red"
+                            android:padding="5dp"
+                            android:src="@drawable/d_cal" />
+                        <!--android:src="@drawable/appointment300"-->
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+
+                            android:background="@color/black"
+                            android:gravity="left|center"
+                            android:paddingLeft="10dp"
+                            android:text="Appointments"
+                            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:textColor="#FFFFFF" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tabs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="#42DCDC"
+                        android:orientation="horizontal"
+                        android:paddingBottom="7dp"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="7dp">
+
+
+                        <Button
+
+                            android:id="@+id/btn_today"
+                            android:layout_width="80dp"
+                            android:layout_height="25dp"
+                            android:layout_marginRight="5dp"
+
+
+                            android:background="@color/red"
+                            android:text="TODAY"
+                            android:textAllCaps="true"
+                            android:textColor="#fff"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btn_tomo"
+                            android:layout_width="80dp"
+                            android:layout_height="25dp"
+                            android:layout_marginRight="5dp"
+
+                            android:background="@color/white"
+                            android:text="TOMORROW"
+
+                            android:textColor="@color/app_green"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btn_tismonth"
+                            android:layout_width="80dp"
+                            android:layout_height="25dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@color/white"
+
+                            android:text="THIS MONTH"
+                            android:textColor="@color/app_green"
+
+                            android:textSize="12sp"
+
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btn_all"
+                            android:layout_width="80dp"
+                            android:layout_height="25dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@color/white"
+
+                            android:text="ALL"
+                            android:textAllCaps="true"
+                            android:textColor="@color/app_green"
+                            android:textSize="12sp"
+
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/today"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_weight="2.4"
+                        android:background="#f7f7f7"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/my_recycler_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scrollbars="vertical" />
+
+                        <TextView
+                            android:id="@+id/emptyText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:gravity="center_horizontal"
+                            android:text="No Appointments"
+                            android:textColor="@color/black"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                //third part
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.3"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:id="@+id/next_appointments"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+
+                        android:background="#e2e8ef"
+                        android:orientation="horizontal">
+
+                        <ImageView
+
+                            android:id="@+id/nextapp_back"
+                            android:layout_width="30dp"
+
+                            android:layout_height="30dp"
+                            android:background="@color/red"
+                            android:padding="5dp"
+                            android:src="@drawable/d_clock"
+
+                            />
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+
+
+                            android:background="@color/black"
+                            android:gravity="left|center"
+                            android:paddingLeft="10dp"
+                            android:text="Progress"
+                            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:textColor="#FFFFFF" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+
+                        android:id="@+id/no_appointment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Check the progress of your appointments by clicking on appointment above"
+                        android:textAllCaps="false"
+
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+
+                    <LinearLayout
+                        android:id="@+id/next_appointmentLay"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/header"
+                        android:layout_margin="8dp"
+
+                        android:orientation="horizontal"
+
+
+                        android:visibility="gone"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.4"
+                            android:padding="10dp">
+
+                            <com.aryvart.uticianvender.genericclasses.CircularImageView
+                                android:id="@+id/userprofile"
+                                android:layout_width="64dp"
+                                android:layout_height="64dp"
+
+                                android:alpha="1"
+                                android:src="@drawable/default_user_icon"
+
+                                app:siBorderAlpha="0.5"
+                                app:siBorderColor="@color/app_green"
+
+                                app:siBorderWidth="2dp" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:orientation="vertical"
+
+                                android:weightSum="2">
+
+                                <TextView
+                                    android:id="@+id/tv_lastApp_userName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+
+
+                                    android:gravity="center"
+
+                                    android:text=""
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <TextView
+
+                                    android:id="@+id/time"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+
+
+                                    android:layout_weight="1"
+
+
+                                    android:gravity="center"
+                                    android:text=""
+
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.6"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:weightSum="3">
+
+
+                            <TextView
+                                android:id="@+id/service_type"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="5dp"
+
+
+                                android:layout_weight="1.5"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/leaveforappoitment"
+                                android:layout_width="180dp"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center|left"
+                                android:layout_weight="1"
+
+                                android:background="@drawable/red_box"
+
+
+                                android:gravity="center"
+
+                                android:paddingBottom="2dp"
+
+
+                                android:paddingTop="5dp"
+
+
+                                android:text="LEAVE FOR APPOINTMENT"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:id="@+id/txt"
+
+                                android:layout_width="180dp"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="2dp"
+
+
+                                android:layout_weight=".5"
+                                android:gravity="left"
+                                android:text="You will be able to leave 1 hour before apnt"
+                                android:textColor="@color/black"
+                                android:textSize="8sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/reach"
+
+                        android:layout_width="280dp"
+
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/red_box"
+                        android:orientation="vertical"
+                        android:paddingTop="8dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+
+                            android:gravity="center_horizontal"
+                            android:text="You just left for appointment"
+
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="Click here to confirm arrival"
+
+                            android:textColor="@color/white"
+                            android:textSize="10sp" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/start"
+                        android:layout_width="280dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/red_box"
+                        android:orientation="vertical"
+                        android:paddingTop="8dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+
+                            android:gravity="center_horizontal"
+                            android:text="You just arrived"
+
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="Click here to begin working"
+
+                            android:textColor="@color/white"
+                            android:textSize="10sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/stop"
+                        android:layout_width="280dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/red_box"
+                        android:orientation="vertical"
+                        android:paddingTop="8dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+
+                            android:gravity="center_horizontal"
+                            android:text="You have began working"
+
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="Click here to finish service"
+
+                            android:textColor="@color/white"
+                            android:textSize="10sp" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/paid"
+                        android:layout_width="280dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/red_box"
+                        android:orientation="vertical"
+                        android:paddingTop="8dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+
+                            android:gravity="center_horizontal"
+                            android:text="You have raise invoice"
+
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="Click here to generate invoice"
+
+                            android:textColor="@color/white"
+                            android:textSize="10sp" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/complete"
+                        android:layout_width="280dp"
+
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/red_box"
+                        android:orientation="vertical"
+                        android:paddingTop="8dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+
+                            android:gravity="center_horizontal"
+                            android:text="Complete"
+
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="Click here to complete the service"
+
+                            android:textColor="@color/white"
+                            android:textSize="10sp" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+
+
+        android:id="@+id/lay_out_slider"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+
+
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/br_trans"
+            android:padding="10dp">
+
+
+            <com.aryvart.uticianvender.genericclasses.CircularImageView
+                android:id="@+id/provider_im"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:alpha="1"
+                android:src="@drawable/default_user_icon"
+                app:siBorderAlpha="0.5"
+                app:siBorderColor="@color/app_green"
+
+                app:siBorderWidth="2dp" />
+
+
+            <TextView
+
+                android:id="@+id/user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/provider_im"
+                android:layout_marginLeft="10dp"
+                android:gravity="center|bottom"
+                android:paddingTop="10dp"
+
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:background="@color/br_trans">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical">
+
+                <LinearLayout
+
+                    android:id="@+id/lay_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+
+                        android:elevation="2dp"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:layout_width="32dp"
+
+                            android:layout_height="32dp"
+                            android:src="@drawable/menu_profile" />
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:padding="15dp"
+                        android:singleLine="true"
+                        android:text="Profile"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                        android:textColor="@color/white" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#fe3232" />
+
+                <LinearLayout
+                    android:id="@+id/lay_appointment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:elevation="2dp"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/menu_appoint" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:padding="15dp"
+                        android:singleLine="true"
+                        android:text="Appointment"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#fe3232" />
+
+                <LinearLayout
+                    android:id="@+id/lay_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+
+                        android:elevation="2dp"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:layout_width="32dp"
+
+                            android:layout_height="32dp"
+                            android:src="@drawable/menu_history" />
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:padding="15dp"
+                        android:singleLine="true"
+                        android:text="History"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                        android:textColor="@color/white" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#fe3232" />
+
+                <RelativeLayout
+                    android:id="@+id/lay_notify"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/menu_notify"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:elevation="2dp"
+                        android:padding="15dp">
+
+                        <ImageView
+
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/menu_notify" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/menu_notify"
+                        android:padding="15dp"
+                        android:singleLine="true"
+                        android:text="Notification"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                        android:textColor="@color/white" />
+
+
+                    <TextView
+                        android:id="@+id/notify_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/counter_bg"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text=""
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:textColor="#FFF" />
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#fe3232" />
+
+                <LinearLayout
+                    android:id="@+id/lay_avail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:elevation="2dp"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/menu_avail" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:padding="15dp"
+                        android:singleLine="true"
+                        android:text="Schedule"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                        android:textColor="@color/white" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#fe3232" />
+
+                <LinearLayout
+                    android:id="@+id/lay_settings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:elevation="2dp"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/menu_settings" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:padding="15dp"
+                        android:singleLine="true"
+                        android:text="Settings"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#fe3232" />
+
+                <LinearLayout
+                    android:id="@+id/lay_help"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:elevation="2dp"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/menu_helpp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:padding="15dp"
+                        android:singleLine="true"
+                        android:text="FAQs"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                        android:textColor="@color/white" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#fe3232" />
+
+                <LinearLayout
+                    android:id="@+id/lay_share"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:elevation="2dp"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/share" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:padding="15dp"
+                        android:singleLine="true"
+                        android:text="Share"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                        android:textColor="@color/white" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#fe3232" />
+
+                <RelativeLayout
+                    android:id="@+id/lay_rating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/starImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:elevation="2dp"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:id="@+id/starImagee"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/menu_ratings" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/starImage"
+                        android:padding="15dp"
+                        android:singleLine="true"
+                        android:text="Ratings"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                        android:textColor="@color/white" />
+
+
+                    <TextView
+                        android:id="@+id/rating_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/counter_bg"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:text=""
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:textColor="#FFF" />
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#fe3232" />
+
+                <LinearLayout
+                    android:id="@+id/lay_logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:elevation="2dp"
+
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/menu_logout" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:padding="15dp"
+                        android:singleLine="true"
+                        android:text="Logout"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#fe3232" />
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>

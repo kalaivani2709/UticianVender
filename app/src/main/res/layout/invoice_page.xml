@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+
+        android:orientation="vertical"
+        android:weightSum="3">
+
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#e2e8ef">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/red_left_arrow" />
+
+            <TextView
+                android:id="@+id/parlour_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="Generate Invoice"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+
+        -
+
+
+        -
+
+        <LinearLayout
+            android:background="@color/white"
+            android:id="@+id/top"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header"
+
+            android:orientation="horizontal"
+            android:weightSum="3.01">
+
+
+            -
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2">
+
+
+
+
+
+
+            <com.aryvart.uticianvender.genericclasses.CircularImageView
+                android:id="@+id/provider_im"
+
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_width="89dp"
+                android:layout_height="89dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/default_user_icon"
+                app:siBorderWidth="2dp"
+                app:siBorderAlpha="0.5"
+
+                app:siBorderColor="@color/app_green"
+                android:alpha="1"
+
+
+
+                 />
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:padding="3dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.2"
+                        android:gravity="left"
+                        android:text=""
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="@color/black" />
+
+                    <TextView
+
+                        android:id="@+id/rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_weight=".8"
+                        android:gravity="left"
+                        android:text=""
+                        android:drawablePadding="3dp"
+
+                        android:drawableLeft="@drawable/srate"
+                        android:textSize="10sp"
+                        android:textColor="#666" />
+
+                    <!-- <RatingBar
+                         android:id="@+id/review_rating"
+                         android:layout_width="wrap_content"
+                         android:layout_height="25dp"
+                         android:layout_marginLeft="2dp"
+                         android:layout_marginTop="5dp"
+                         android:isIndicator="true"
+                         android:numStars="5"
+                         android:progressDrawable="@drawable/rating_bar_style"
+                         android:rating="3"
+                         android:stepSize="0.1" />-->
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Appointment"
+                        android:textColor="#000"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/time"
+                        android:layout_width="90dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/red_box"
+                        android:gravity="center"
+                        android:text="10:00AM"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        //last part
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="3"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:weightSum="10">
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".05"
+                android:background="@color/greycolor"></View>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="7.5"
+                android:orientation="vertical"
+                android:weightSum="4.4">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                     android:layout_margin="20dp"
+                        android:id="@+id/llaySR"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+                </ScrollView>
+
+
+            </LinearLayout>
+
+            //total
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/total_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    android:weightSum="2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:textSize="20sp"
+
+                        android:id="@+id/tot_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:text="TOTAL"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:textSize="20sp"
+                        android:id="@+id/tv_totalRateAD"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+
+                        android:text=""
+
+                        android:textColor="@color/app_green"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+               <!-- <LinearLayout
+                    android:id="@+id/tax_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/total_lay"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_weight="1.5"
+                        android:id="@+id/name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="right"
+                        android:text="SERVICE TAX"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tv_ServiceTax"
+                        android:layout_width="0dp"
+                        android:layout_weight=".5"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="right"
+                        android:layout_marginRight="20dp"
+                        android:text="$30"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/grand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_below="@+id/tax_lay"
+        android:weightSum="2"
+                    android:orientation="horizontal">
+
+                  &lt;!&ndash;  <TextView
+                        android:layout_weight="1.5"
+
+                        android:layout_width="0dp"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                 android:layout_gravity="right"
+                        android:text="GRAND TOTAL"
+                        android:textColor="@color/black" />
+&ndash;&gt;
+                    <TextView
+                        android:layout_weight="1.5"
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="right"
+                        android:text="GRAND TOTAL"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tv_grandTotal"
+                        android:layout_width="0dp"
+                        android:layout_weight=".5"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="right"
+                        android:layout_marginRight="20dp"
+                        android:text="$30"
+                        android:textColor="#fe3232"
+                        android:textStyle="bold" />
+                </LinearLayout>
+-->
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_below="@+id/grand"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/but_generate"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:background="@drawable/red_box"
+                    android:gravity="center"
+                    android:text="Generate INVOICE"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+

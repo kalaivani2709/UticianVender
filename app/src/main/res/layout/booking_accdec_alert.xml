@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llayalertDialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/edittext_rectangle"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+
+
+   <!-- <FrameLayout
+
+        android:id="@+id/ll_provider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp">
+
+
+        <com.aryvart.utician.genericclasses.Rounded_Imageview
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:src="@drawable/round_image_border" />
+
+        <com.aryvart.utician.genericclasses.Rounded_Imageview
+            android:id="@+id/user_image"
+            android:layout_width="108dp"
+            android:layout_height="109dp"
+            android:layout_gravity="center"
+            android:src="@drawable/default_user_icon" />
+
+    </FrameLayout>-->
+
+    <com.aryvart.uticianvender.genericclasses.CircularImageView
+        android:id="@+id/user_image"
+        android:layout_width="108dp"
+        android:layout_height="109dp"
+        android:layout_gravity="center"
+
+        android:layout_marginTop="30dp"
+        app:siBorderWidth="2dp"
+        app:siBorderAlpha="0.5"
+
+        app:siBorderColor="@color/app_green"
+        android:alpha="1"
+
+        android:src="@drawable/default_user_icon" />
+
+
+    <TextView
+        android:id="@+id/txt_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Username"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#666" />
+    <RatingBar
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:id="@+id/txt_Rating"
+        android:clickable="false"
+        android:focusableInTouchMode="false"
+        android:focusable="false"
+        android:layout_gravity="center_horizontal" />
+
+
+    <!-- <TextView
+         android:id="@+id/txt_Rating"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="10dp"
+         android:gravity="center"
+         android:text="4.8 Star Rating"
+         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+         android:textColor="#666" />-->
+
+        <TextView
+            android:id="@+id/txt_Service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:drawableLeft="@drawable/uticianlogo"
+
+            android:drawablePadding="1dp"
+
+            android:scrollHorizontally="false"
+            android:text="Service"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/app_green" />-->
+        <TextView
+            android:id="@+id/txt_Message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+
+            android:scrollHorizontally="false"
+            android:text="Message"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#666" />
+    <TextView
+        android:id="@+id/txt_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+
+        android:textSize="12sp"
+        android:scrollHorizontally="false"
+        android:text="Date"
+
+        android:textColor="#666" />
+
+    <TextView
+        android:id="@+id/txt_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+
+        android:textSize="14sp"
+        android:scrollHorizontally="false"
+        android:text="Date"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#666" />
+    <TextView
+        android:id="@+id/txt_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="left"
+
+
+android:textSize="14sp"
+        android:scrollHorizontally="false"
+        android:text="Time"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#666" />
+    <!--<TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:drawableLeft="@drawable/clk20"
+
+        android:drawablePadding="5dp"
+
+        android:scrollHorizontally="false"
+        android:text="Time"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#666" />-->
+
+    <TextView
+        android:id="@+id/txt_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="If you accept this will show in your appointments"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#666"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/llay_text"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+
+
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+
+
+        <Button
+            android:id="@+id/btn_Accept"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+
+            android:layout_weight="1"
+            android:background="@drawable/green_box"
+            android:gravity="center"
+            android:text="ACCEPT"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+
+
+        <Button
+            android:id="@+id/btn_Decline"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+
+            android:layout_weight="1"
+            android:background="@drawable/red_box"
+            android:gravity="center"
+            android:text="Decline"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

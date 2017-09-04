@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center|top"
+    android:layout_margin="5dp"
+
+    android:orientation="horizontal"
+    android:paddingTop="5dp">
+
+
+    <EditText
+        android:gravity="center"
+
+        android:id="@+id/editWorkLocation"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+
+        android:background="@null"
+        android:drawableRight="@drawable/loc_icon"
+        android:editable="false"
+        android:hint="What city would you like to serve?"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:textColor="#000"
+        android:textSize="16sp" />
+
+
+</RelativeLayout>

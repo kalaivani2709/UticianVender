@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/app_back">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#e2e8ef">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/red_left_arrow" />
+
+        <TextView
+            android:id="@+id/parlour_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="Utician Information"
+            android:textColor="#898A91"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/img_logo"
+                android:layout_width="120dp"
+                android:layout_height="130dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+
+
+
+
+
+                android:alpha="1"
+
+                android:src="@drawable/default_app_icon" />
+
+
+            <!-- <com.aryvart.utician.genericclasses.Rounded_Imageview
+                 android:id="@+id/img_logo"
+                 android:layout_width="120dp"
+                 android:layout_height="130dp"
+                 android:layout_centerHorizontal="true"
+                 android:layout_marginTop="10dp"
+                 android:gravity="center"
+                 android:src="@drawable/default_app_icon" />
+ -->
+            <LinearLayout
+                android:id="@+id/llayCompanyName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/img_logo"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/edCompanyName"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/edittext_rectangle"
+                    android:gravity="center"
+                    android:hint="Company Name"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textSize="16sp" />
+
+
+ <FrameLayout
+                    android:layout_width="match_parent"
+     android:layout_marginBottom="10dp"
+     android:background="@drawable/edittext_rectangle"
+                    android:layout_height="45dp"
+
+                    android:orientation="horizontal" >
+                    <fragment
+                        android:id="@+id/comp_address"
+                        android:name="com.aryvart.uticianvender.provider.ProviderPlaceAutoComplete"
+                        android:layout_width="match_parent"
+
+
+                        android:layout_gravity="center"
+                        android:layout_marginRight="2dp"
+                        android:textColor="#fff"
+                        android:layout_height="45dp"
+                 />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/llayImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llayNEmployee"
+                    android:background="@drawable/edittext_rectangle"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <EditText
+
+                        android:id="@+id/edImages"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_weight="1.5"
+                        android:background="#00000000"
+                        android:gravity="center"
+                        android:hint="Upload Images"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/imv_imageUpload"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="0.5"
+                        android:src="@drawable/browse_icon" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llayNote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/help" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:text="This is for your photo gallery"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/llayGallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/llayNote"
+                    android:gravity="center_horizontal">
+                    <ProgressBar
+
+                        android:layout_centerInParent="true"
+                        android:id="@+id/progressBar"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_margin="5dip"
+                        android:indeterminateDrawable="@drawable/my_progress_indeterminate"
+                        />
+
+
+                    <GridView
+                        android:id="@+id/gridview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="170dp"
+                        android:columnWidth="60dp"
+                        android:gravity="center"
+                        android:horizontalSpacing="3dp"
+                        android:numColumns="4"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="3dp"></GridView>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llayGallery"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/llaySubmit"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+
+                        android:background="@drawable/red_box"
+                        android:gravity="center"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textColor="#ffffff"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

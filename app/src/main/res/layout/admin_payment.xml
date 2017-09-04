@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#e2e8ef">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/red_left_arrow" />
+
+        <TextView
+            android:id="@+id/parlour_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="Admin Information"
+            android:textColor="#898A91"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/img_logo"
+                android:layout_width="120dp"
+                android:layout_height="130dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:src="@drawable/default_app_icon"
+
+
+
+                />
+
+
+           <!-- <com.aryvart.utician.genericclasses.Rounded_Imageview
+                android:id="@+id/img_logo"
+                android:layout_width="120dp"
+                android:layout_height="130dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:src="@drawable/default_app_icon" />
+-->
+            <LinearLayout
+                android:id="@+id/llayCompanyName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/img_logo"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:text="Account Information"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_gravity="center"
+                        android:layout_height="15dp"
+                        android:src="@drawable/help"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="10sp"
+                        android:gravity="center|left"
+                        android:paddingLeft="10dp"
+                        android:text="Where would you like your payments to go?"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+
+                <EditText
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/edittext_rectangle"
+                    android:id="@+id/ed_merchantId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:maxLength="32"
+                    android:textAllCaps="true"
+                    android:hint="MERCHANT ID"
+                    android:layout_marginTop="10dp"
+
+
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textSize="12sp" />
+
+
+
+                <EditText
+                    android:inputType="textPersonName"
+                    android:id="@+id/ed_publicKey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:textAllCaps="true"
+                    android:background="@drawable/edittext_rectangle"
+                    android:maxLength="32"
+                    android:hint="PUBLIC KEY"
+
+                    android:singleLine="true"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/ed_privateKey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:maxLength="32"
+                    android:hint="PRIVATE KEY"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:textAllCaps="true"
+                    android:background="@drawable/edittext_rectangle"
+                    android:singleLine="true"
+                    android:textSize="12sp" />
+
+
+
+
+                <EditText
+                    android:inputType="number"
+
+                    android:id="@+id/ed_merchantaccountid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:textAllCaps="true"
+                    android:background="@drawable/edittext_rectangle"
+                    android:maxLength="40"
+                    android:hint="MERCHANTACCOUNT ID"
+
+                    android:singleLine="true"
+                    android:textSize="12sp" />
+
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llayCompanyName"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/llayNext"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/red_box"
+                    android:gravity="center"
+                    android:text="submit"
+                    android:textAllCaps="true"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

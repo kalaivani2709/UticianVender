@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llayalertDialog"
+
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@color/white"
+
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_marginTop="2dp"
+        android:id="@+id/close"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="right"
+        android:src="@drawable/close_green" />
+
+
+
+    <com.aryvart.utician.genericclasses.CircularImageView
+        android:id="@+id/user_image"
+        android:layout_width="99dp"
+        android:layout_height="99dp"
+        android:layout_gravity="center"
+
+        android:background="@null"
+        app:siBorderWidth="2dp"
+        app:siBorderAlpha="0.5"
+
+        app:siBorderColor="@color/app_green"
+        android:alpha="1"
+
+        android:src="@drawable/default_user_icon" />
+
+
+
+    <TextView
+        android:id="@+id/txt_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#666" />
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:textSize="10dp"
+        android:text="Tell others about your experience with this utician"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#666" />
+
+
+    <LinearLayout
+        android:id="@+id/llay_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:background="@drawable/issue_border"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/txt_Rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:singleLine="true"
+                android:text="Rate"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#666" />
+
+
+            <RatingBar
+                android:id="@+id/review_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="32sp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:isIndicator="false"
+                android:numStars="5"
+                android:progressDrawable="@drawable/rating_bar_style"
+                android:stepSize="0.1" />
+
+        </LinearLayout>
+        <EditText
+            android:paddingRight="10dp"
+            android:id="@+id/edit_review"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+
+            android:gravity="left"
+            android:hint="Review"
+            android:inputType="textMultiLine"
+
+
+            android:paddingTop="10dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/issue_border"            android:paddingLeft="10dp"
+            android:singleLine="false"
+            />
+
+
+
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/but_submit"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+
+                android:layout_weight="1"
+                android:background="@drawable/red_box"
+                android:gravity="center"
+                android:text="SUBMIT"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+
+            <Button
+                android:id="@+id/butcancel"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+
+                android:layout_weight="1"
+                android:background="@drawable/green_box"
+                android:gravity="center"
+                android:text="CANCEL"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

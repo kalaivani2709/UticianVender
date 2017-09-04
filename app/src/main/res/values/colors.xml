@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#42dcdc</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#fff</color>
+    <color name="red">#fe3232</color>
+    <color name="greycolor">#c8c8c8</color>
+    <color name="black">#000</color>
+    <color name="summer">#44eebd82</color>
+    <color name="fall">#44d8d27e</color>
+    <color name="winter">#44a1c1da</color>
+    <color name="spring">#448da64b</color>
+    <color name="textgreycolor">#B0C3E2</color>
+    <color name="violet">#0960bd</color>
+    <color name="dark_violet">#014598</color>
+    <color name="grey">#d4d4d4</color>
+    <color name="grey_two">#727272</color>
+    <color name="today">#ffffff</color>
+    <color name="greyed_out">#c7c7c7</color>
+    <color name="ball1">#FFD91C</color>
+    <color name="ball2">#FF4B4A</color>
+    <color name="ball3">#3D8EFF</color>
+
+    <integer-array name="colors">
+        <item>@color/app_green</item>
+
+        <item>@color/black</item>
+        <item>@color/red</item>
+    </integer-array>
+
+    <color name="br_trans">#99000000</color>
+
+    <color name="lightgray">#e7e7e7</color>
+    <color name="lightgray02">#bfbfbf</color>
+    <color name="dark">#000015</color>
+    <color name="lightgreen">#336666</color>
+    <color name="orrange">#e33d1b</color>
+
+    <color name="app_green">#42dcdc</color>
+    <color name="app_lgreen">#33C3C4</color>
+    <color name="darkorrange">#cc2303</color>
+
+</resources>

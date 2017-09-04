@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+    <com.aryvart.uticianvender.genericclasses.CircularImageView
+        android:id="@+id/reviewer_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+
+
+        app:siBorderWidth="2dp"
+        app:siBorderAlpha="0.5"
+
+        app:siBorderColor="@color/app_green"
+        android:alpha="1"
+
+        android:src="@drawable/default_user_icon" />
+
+
+
+
+
+
+    <RatingBar
+        android:id="@+id/review_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="5dp"
+        android:progressDrawable="@drawable/rating_bar_style"
+        android:rating="3"
+        android:stepSize="0.1" />
+</LinearLayout>
+
+<View
+    android:layout_width="0.5dp"
+    android:layout_height="100dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    android:background="#d2d2d2"></View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/reviewer_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="John"
+                android:textColor="#000"
+                android:textSize="13sp"
+                 />
+
+            <TextView
+                android:id="@+id/reviewer_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:maxLines="5"
+                android:text="Peer review has a vital role to play in research and publishing and a key step in that process is the revision of your paper. However, knowing how to respond to reviewers' comments isn't always easy - get it right and you could see your paper published, get it wrong and it could mean rejection. So what can you do to increase your chances of success?"
+                android:textColor="#969696"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="0.5dp"
+    android:layout_marginTop="10dp"
+    android:background="#d2d2d2"></View>
+</LinearLayout>
